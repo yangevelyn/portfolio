@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/test/static/css/main.cb7df72e.chunk.css",
-    "main.js": "/test/static/js/main.cfdbf117.chunk.js",
-    "main.js.map": "/test/static/js/main.cfdbf117.chunk.js.map",
-    "runtime-main.js": "/test/static/js/runtime-main.d8e83e74.js",
-    "runtime-main.js.map": "/test/static/js/runtime-main.d8e83e74.js.map",
-    "static/js/2.e5b1fa29.chunk.js": "/test/static/js/2.e5b1fa29.chunk.js",
-    "static/js/2.e5b1fa29.chunk.js.map": "/test/static/js/2.e5b1fa29.chunk.js.map",
-    "index.html": "/test/index.html",
-    "precache-manifest.04fc3a1f29b8c32b6bc365caff819502.js": "/test/precache-manifest.04fc3a1f29b8c32b6bc365caff819502.js",
-    "service-worker.js": "/test/service-worker.js",
-    "static/css/main.cb7df72e.chunk.css.map": "/test/static/css/main.cb7df72e.chunk.css.map",
-    "static/js/2.e5b1fa29.chunk.js.LICENSE.txt": "/test/static/js/2.e5b1fa29.chunk.js.LICENSE.txt",
-    "static/media/back-to-top.svg": "/test/static/media/back-to-top.4feb6180.svg",
-    "static/media/book.jpg": "/test/static/media/book.70ee21c5.jpg",
-    "static/media/germany.jpg": "/test/static/media/germany.436be85b.jpg",
-    "static/media/guitar.jpg": "/test/static/media/guitar.387f2edc.jpg",
-    "static/media/piano.jpg": "/test/static/media/piano.f7d7bc93.jpg",
-    "static/media/spotify-logo.jpg": "/test/static/media/spotify-logo.b14bd3e9.jpg",
-    "static/media/wave.png": "/test/static/media/wave.890a2a16.png"
+    "main.css": "/website/static/css/main.cb7df72e.chunk.css",
+    "main.js": "/website/static/js/main.d70d49b6.chunk.js",
+    "main.js.map": "/website/static/js/main.d70d49b6.chunk.js.map",
+    "runtime-main.js": "/website/static/js/runtime-main.1abda330.js",
+    "runtime-main.js.map": "/website/static/js/runtime-main.1abda330.js.map",
+    "static/js/2.e5b1fa29.chunk.js": "/website/static/js/2.e5b1fa29.chunk.js",
+    "static/js/2.e5b1fa29.chunk.js.map": "/website/static/js/2.e5b1fa29.chunk.js.map",
+    "index.html": "/website/index.html",
+    "precache-manifest.69c424a1805c2789e49b7af10600198d.js": "/website/precache-manifest.69c424a1805c2789e49b7af10600198d.js",
+    "service-worker.js": "/website/service-worker.js",
+    "static/css/main.cb7df72e.chunk.css.map": "/website/static/css/main.cb7df72e.chunk.css.map",
+    "static/js/2.e5b1fa29.chunk.js.LICENSE.txt": "/website/static/js/2.e5b1fa29.chunk.js.LICENSE.txt",
+    "static/media/back-to-top.svg": "/website/static/media/back-to-top.4feb6180.svg",
+    "static/media/book.jpg": "/website/static/media/book.70ee21c5.jpg",
+    "static/media/germany.jpg": "/website/static/media/germany.436be85b.jpg",
+    "static/media/guitar.jpg": "/website/static/media/guitar.387f2edc.jpg",
+    "static/media/piano.jpg": "/website/static/media/piano.f7d7bc93.jpg",
+    "static/media/spotify-logo.jpg": "/website/static/media/spotify-logo.b14bd3e9.jpg",
+    "static/media/wave.png": "/website/static/media/wave.890a2a16.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d8e83e74.js",
+    "static/js/runtime-main.1abda330.js",
     "static/js/2.e5b1fa29.chunk.js",
     "static/css/main.cb7df72e.chunk.css",
-    "static/js/main.cfdbf117.chunk.js"
+    "static/js/main.d70d49b6.chunk.js"
   ]
 }
