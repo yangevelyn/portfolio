@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/test/static/css/main.d1b05096.chunk.css",
-    "main.js": "/test/static/js/main.76d47be5.chunk.js",
-    "main.js.map": "/test/static/js/main.76d47be5.chunk.js.map",
+    "main.css": "/test/static/css/main.cb7df72e.chunk.css",
+    "main.js": "/test/static/js/main.cfdbf117.chunk.js",
+    "main.js.map": "/test/static/js/main.cfdbf117.chunk.js.map",
     "runtime-main.js": "/test/static/js/runtime-main.d8e83e74.js",
     "runtime-main.js.map": "/test/static/js/runtime-main.d8e83e74.js.map",
-    "static/js/2.262eeec0.chunk.js": "/test/static/js/2.262eeec0.chunk.js",
-    "static/js/2.262eeec0.chunk.js.map": "/test/static/js/2.262eeec0.chunk.js.map",
+    "static/js/2.e5b1fa29.chunk.js": "/test/static/js/2.e5b1fa29.chunk.js",
+    "static/js/2.e5b1fa29.chunk.js.map": "/test/static/js/2.e5b1fa29.chunk.js.map",
     "index.html": "/test/index.html",
-    "precache-manifest.e82b67ab5920b1efda64a93951d27b85.js": "/test/precache-manifest.e82b67ab5920b1efda64a93951d27b85.js",
+    "precache-manifest.9c9d0ad71ccae0cfcc438bf63c57e458.js": "/test/precache-manifest.9c9d0ad71ccae0cfcc438bf63c57e458.js",
     "service-worker.js": "/test/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/test/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.262eeec0.chunk.js.LICENSE.txt": "/test/static/js/2.262eeec0.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/test/static/media/logo.5d5d9eef.svg"
+    "static/css/main.cb7df72e.chunk.css.map": "/test/static/css/main.cb7df72e.chunk.css.map",
+    "static/js/2.e5b1fa29.chunk.js.LICENSE.txt": "/test/static/js/2.e5b1fa29.chunk.js.LICENSE.txt",
+    "static/media/back-to-top.svg": "/test/static/media/back-to-top.4feb6180.svg",
+    "static/media/book.jpg": "/test/static/media/book.70ee21c5.jpg",
+    "static/media/germany.jpg": "/test/static/media/germany.436be85b.jpg",
+    "static/media/guitar.jpg": "/test/static/media/guitar.387f2edc.jpg",
+    "static/media/piano.jpg": "/test/static/media/piano.f7d7bc93.jpg",
+    "static/media/spotify-logo.jpg": "/test/static/media/spotify-logo.b14bd3e9.jpg",
+    "static/media/wave.png": "/test/static/media/wave.890a2a16.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d8e83e74.js",
-    "static/js/2.262eeec0.chunk.js",
-    "static/css/main.d1b05096.chunk.css",
-    "static/js/main.76d47be5.chunk.js"
+    "static/js/2.e5b1fa29.chunk.js",
+    "static/css/main.cb7df72e.chunk.css",
+    "static/js/main.cfdbf117.chunk.js"
   ]
 }
