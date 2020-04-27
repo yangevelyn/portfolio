@@ -1,38 +1,388 @@
-.App {
+* {
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+  /* https://css-tricks.com/snippets/jquery/smooth-scrolling/ */
+  scroll-behavior: smooth;
+  /* background-color: rgb(232, 232, 232); */
+  /* background: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(248,248,248,1) 100%); */
+}
+
+body {
+
+  background: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(248,248,248,1) 100%);
+}
+
+.header {
+  display: flex;
+  color: rgb(250, 169, 8);
+  margin-left: 2rem;
+  font-size: 42px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header h1{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header h1 a {
+  text-decoration: none;
+  color: rgb(250, 169, 8);
+}
+
+.nav-bar {
+  display: flex;
+  margin-left: 2rem;
+  z-index: 1;
+  max-width: 100%;
+}
+
+.nav-bar .tab {
+  font-size: 1.75vw;
+  margin-right: 1.5rem;
+}
+
+.nav-bar :hover {
+  color: rgb(51, 11, 11);
+  cursor: pointer;
+}
+
+/* .nav-bar a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-bar a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-bar a:hover {
+  text-decoration: none;
+  color: rgb(255, 233, 190);
+  color: rgb(51, 11, 11);
+  color: rgb(71, 16, 16);
+  cursor: pointer;
+} */
+
+/* .nav-bar .tab .active a{
+  color: rgb(250, 169, 8);
+} */
+
+hr {
+  margin-left: 3rem;
+  width: 27.5vw;
+  height: 1px;
+  border: 0px;
+  /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(240,240,240,1) 100%); */
+  background: rgb(18, 18, 18, 0.75)
+}
+
+/* HOME PAGE */
+.home-text {
+  position: absolute;
+  font-size: 6vh;
+  text-align: right;
+  bottom: 5vh;
+  right: 5vw;
+  color: rgb(48, 48, 48);
+  max-height: 70%;
+}
+
+.home-text p {
+  margin-top: 0;
+}
+
+.content {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 0rem;
+}
+
+/* ABOUT */
+.main-body {
+  display: flex;
+  /* grid-template-columns: 4fr 6fr;
+  grid-gap: 1rem; */
+}
+
+.main-body .image {
+  width: 30vw;
+  padding-right: 2rem;
+}
+
+.main-body .description {
+  /* https://stackoverflow.com/questions/43999732/how-to-make-a-fixed-column-in-css-using-css-grid-layout */
+  position: fixed;
+  top: 75%;
+  /* bottom: 2vh; */
+  /* height: 95vh; */
+  max-width: 35vw;
+}
+
+.about-grid {
+  position: absolute;
+  margin-left: 40vw;
+  margin-right: 2vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-content: center;
+  align-items: center;
+  justify-self: center;
+  grid-gap: 1rem;
+}
+
+.about-grid .grid-item {
+  /* justify-content: center; */
+  text-align: center;
+  width: 100%;
+}
+
+.about-grid .grid-img {
+  text-align: center; /* center an image in a grid */
+  object-fit: cover;
+  /* height: 35vh; */
+  max-width: 100%;
+  max-height: 65vh;
+  padding: 1rem;
+}
+
+.about-grid .grid-item p {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* PROJECTS */
+.projs-desc {
+  top: 75%;
+  max-width: 35vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.projects-grid {
+  order: -1;
+  display: grid;
+  grid-template-columns: 65vw auto;
+  height: 100vh;
+  /* width: 65vw; */
+  padding-top: 5vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.project {
+  justify-self: center; /* center this project within the project-grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, auto);
+  /* overflow: auto; */
+  width: 50vw;
+  height: 40vh;
+  /* align-items: stretch; */
+}
+
+.project .proj-desc {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  grid-column: span 2;
 }
 
-.App-link {
-  color: #61dafb;
+.project .grid-item {
+  /* overflow: hidden; */
+  /* max-height: 30vh; */
+  /* to fix chrome issue must set an explicit height for parent for max-height: 100% to work in child*/
+  /* https://stackoverflow.com/questions/14262938/child-with-max-height-100-overflows-parent */
+  height: 25vh; 
+  /* min-height: 25vh;
+  max-height: 50vh; */
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.project .img {
+  /* without these lines, img was making the project grid really long (because of large size of original image) */
+  object-fit: scale-down;
+  width: 100%;
+  min-height: 50%;
+  max-height: 100%;
+}
+
+.project .video {
+  /* without these lines, img was making the project grid really long (because of large size of original image) */
+  object-fit: scale-down;
+  /* width: 100%; */
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 50%;
+}
+
+/* RESUME */
+.resume-desc {
+  order: -1;
+}
+
+.iframe-container {
+  /* overflow: hidden; */
+  /* // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625) */
+  /* padding-top: -10%; */
+  /* padding-bottom: 0%; */
+  padding-left: 5vw;
+  padding-right: 3vw;
+  position: relative;
+  min-width: 70%;
+}
+ 
+.iframe-container iframe {
+  border: 0;
+  height: 100vh;
+  left: 0;
+  /* position: absolute; */
+  /* top: -10vh; */
+  min-width: 100%;
+}
+
+#lightbox {
+  /* display: none;
+  background-color: black; */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+#lightbox div {
+  margin: auto;
+}
+
+#lightbox img {
+  /* display: block;
+  margin: auto; */
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 65vh;
+}
+
+#to-top {
+  /* order: -1; */
+  display: none;
+  position: fixed;
+  bottom: 5vh;
+  right: 2rem;
+  z-index: 1;
+}
+
+#left-to-top {
+  display: none;
+  position: fixed;
+  bottom: 5vh;
+  left: 2rem;
+}
+
+#to-top:hover {
+  cursor: pointer;
+}
+
+@media (max-height: 600px) {
+  .main-body .description {
+      position: relative;
+      top: 65%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 500px) {
+  .nav-bar{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50%);
+    flex-direction: column;
+    justify-content: center;
+    margin-left: unset;
+    align-content: center;
+  }
+
+  .nav-bar .tab{
+      font-size: 4.5vw;
+      justify-self: center;
+      margin: unset;
+  }
+  
+  hr {
+    width: 0%;
+    margin-left: none;
+    margin-right: 100%;
+  }
+
+  .home-text {
+      overflow: scroll;
+      position: relative;
+      margin-top: 10vh;
+  }
+
+  .main-body {
+      /* grid-template-columns: 1fr; */
+      display: flex;
+      flex-direction: column;
+  }
+
+  .main-body .description {
+      top: 0;
+      position: relative;
+      min-width: 100%;
+      max-height: 20%;
+      height: 0%;
+  }
+
+  .main-body .about-grid {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+  }
+
+  .about-grid {
+      position: unset;
+      margin-left: unset;
+      margin-right: unset;
+      display: unset;
+      /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+      align-content: center;
+      align-items: center;
+      justify-self: center;
+      /* grid-gap: 1rem; */
+  }
+
+  .projects-grid {
+      display: flex;
+      flex-direction: column;
+      height: unset;
+      padding: unset;
+  }
+
+  .projs-desc {
+      order: -1;
+      position: relative;
+      /* top: 30%; */
+      min-width: 100%;
+      /* max-height: 10%;
+      height: 0%; */
+  }
+
+  .project {
+    order: 2;
+    position: relative;
+    justify-self: center; /* center this project within the project-grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, auto);
+    /* overflow: auto; */
+    width: 100%;
+    min-height: 40vh;
+    /* align-items: stretch; */
   }
 }
