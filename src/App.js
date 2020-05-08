@@ -1,14 +1,21 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import './App.css';
 import Body from './components/Body'
 import TabList from './components/TabList'
 import Header from './components/Header'
+import config from './config.js'
+
+const firebase = require('firebase')
 
 export class App extends Component{
+  // const [data, setData] = useState([]);
+  // const sample = ["test", "hello", "hi"]
+
   constructor(){
     super();
     this.state = {
-      activeTab: 1
+      activeTab: 1,
+      data: ""
     }
 
     this.changeTab = (id) => {
@@ -22,6 +29,32 @@ export class App extends Component{
     this.openLightbox = this.openLightbox.bind(this);
     this.toTop = this.toTop.bind(this);
   }
+
+  componentDidMount = () => {
+    //It is necessary to check if firebase has already been initialized otherwise it will throw an exception if it tries to initialize again
+    //You can put this code in your componentDidMount function, or in an Effect to make sure it is ran when the app loads.
+    //Use the second argument to useEffect() to control how often it is ran  
+    if (!firebase.apps.length) {
+      firebase.initializeApp(config)
+    } 
+
+    //get a reference to the database
+    let ref = firebase.database().ref('data')
+
+    //retrieve its data
+    ref.on('value', snapshot => {
+        //this is your call back function
+        //state will be a JSON object after this
+        //set your apps state to contain this data however you like
+        // const state = snapshot.val()
+        //since i use react 16, i set my state like this
+        //i have previously declared a state variable like this: const [data, setData] = useState([]) so that I can make the below call
+        // setData(state)
+        this.setState({data: snapshot.val});
+    })
+  }
+
+  //componentdidupdate called every update
 
   handleScroll = () => {
     console.log('handleScroll');
@@ -110,6 +143,10 @@ export class App extends Component{
       {
         id: 4,
         title: 'RESUME'
+      },
+      {
+        id: 5,
+        title: 'GUESTBOOK'
       }
     ]
 
@@ -134,6 +171,11 @@ export class App extends Component{
         <div className="body">
           <Body activeTab={this.state.activeTab} functions={functions}/>
         </div>
+        {/* {this.sample.map((s, index) => (
+          <p>
+            {s}
+          </p>
+        ))} */}
       </div>
     );
   }
