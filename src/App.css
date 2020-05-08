@@ -10,6 +10,7 @@
 body {
 
   background: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(248,248,248,1) 100%);
+  height: 100%;
 }
 
 .header {
@@ -39,7 +40,7 @@ body {
 }
 
 .nav-bar .tab {
-  font-size: 1.75vw;
+  font-size: 1.5vw;
   margin-right: 1.5rem;
 }
 
@@ -97,6 +98,7 @@ hr {
 .content {
   margin-left: 2rem;
   margin-right: 2rem;
+  height: 100%;
 }
 
 .content h2 {
@@ -238,6 +240,22 @@ hr {
   /* position: absolute; */
   /* top: -10vh; */
   min-width: 100%;
+}
+
+/* GUESTBOOK */
+.gb-form {
+  padding: 6vh;
+  padding-top: unset;
+  width: 45vw;
+  overflow: scroll;
+}
+
+.gb-messages {
+  padding: 6vh;
+  padding-top: unset;
+  width: 50vw;
+  max-height: 50vh;
+  overflow: scroll;
 }
 
 #lightbox {
@@ -384,5 +402,13 @@ hr {
     width: 100%;
     min-height: 40vh;
     /* align-items: stretch; */
+  }
+
+  .gb-form {
+    width: 95vw;
+  }
+  
+  .gb-messages {
+    width: 95vw;
   }
 }
