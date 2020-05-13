@@ -36,7 +36,7 @@ export class Movies extends Component{
 
     getMovies = async () => {
         for(var i = 0; i < this.state.movieIDs.length; i++){
-            await axios.get(`http://www.omdbapi.com/?apikey=b5a41eaf&i=${this.state.movieIDs[i]}`)
+            await axios.get(`https://www.omdbapi.com/?apikey=b5a41eaf&i=${this.state.movieIDs[i]}`)
             .then((response) => {
                 console.log(response.data);
                 this.setState({posters: [...this.state.posters, response.data.Poster]});
@@ -54,7 +54,7 @@ export class Movies extends Component{
         console.log(box);
         img.src = src;
 
-        await axios.get(`http://www.omdbapi.com/?apikey=b5a41eaf&i=${this.state.movieIDs[index]}`)
+        await axios.get(`https://www.omdbapi.com/?apikey=b5a41eaf&i=${this.state.movieIDs[index]}`)
         .then((response) => {
             console.log(response.data);
             this.setState({
