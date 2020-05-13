@@ -4,6 +4,7 @@ import About from './About';
 import Projects from './Projects';
 import Resume from './Resume';
 import Guestbook from './Guestbook';
+import Movies from './Movies';
 
 export class Body extends Component{
     displayContent = () => {
@@ -19,6 +20,8 @@ export class Body extends Component{
             return <Resume functions={functions}/>
         } else if(activeTab == 5){
             return <Guestbook functions={functions}/>
+        } else if(activeTab == 6){
+            return <Movies functions={functions}/>
         }
     }
     render() {

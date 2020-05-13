@@ -79,6 +79,7 @@ export class App extends Component{
   }
 
   handleLightbox = () => {
+    console.log("in handlelightbox");
     var openLightbox = this.openLightbox;
     const images = document.getElementsByTagName('img');
     console.log(images)
@@ -147,6 +148,10 @@ export class App extends Component{
       {
         id: 5,
         title: 'GUESTBOOK'
+      },
+      {
+        id: 6,
+        title: 'MOVIES'
       }
     ]
 
