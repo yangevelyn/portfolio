@@ -4,6 +4,7 @@ import Body from './components/Body'
 import TabList from './components/TabList'
 import Header from './components/Header'
 import config from './config.js'
+import {motion} from 'framer-motion'
 
 const firebase = require('firebase')
 
@@ -172,7 +173,10 @@ export class App extends Component{
           <TabList tabs={tabs} activeTab={this.state.activeTab}
           changeTab={this.changeTab}/> 
         </div>
-        <hr />
+        <motion.hr 
+          animate={{ width: "50%"}}
+          transition={{ duration: 0.5}}
+        />
         <div className="body">
           <Body activeTab={this.state.activeTab} functions={functions}/>
         </div>

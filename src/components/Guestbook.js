@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import config from '../config.js'
+import {Frame, Scroll} from 'framer'
 
 const firebase = require('firebase')
 
@@ -234,8 +235,13 @@ export class Guestbook extends Component{
                             </form>
                         </div>
                         <div class="gb-messages">
-                            <h2>Guestbook:</h2>
-                            {guestbook}
+                            <Scroll height={500} width={500}
+                                wheelEnabled={true}>
+                                <Frame background={null}>
+                                    <h2>Guestbook:</h2>
+                                    {guestbook}
+                                </Frame>
+                            </Scroll>
                         </div>
                     </div>
                 </div>

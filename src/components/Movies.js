@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {motion} from 'framer-motion';
 
 const axios = require('axios');
 
@@ -91,9 +92,15 @@ export class Movies extends Component{
 
         var posters = this.state.posters.map((i, index) => {
             return(
-            <div>
+            <motion.div 
+                whileHover={{
+                    scale: 1.02,
+                    transition: { duration: 0.5 },
+                }}
+                whileTap={{ scale: 0.95 }}
+            >
                 <img src={i} class="movies-poster" onClick={() => this.movieLightbox(i, index)}/>
-            </div>
+            </motion.div>
             );
         });
         
