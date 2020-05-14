@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {motion} from 'framer-motion'
 
 export class About extends Component{
     constructor(props){
@@ -26,14 +27,18 @@ export class About extends Component{
                     <div>
                         <input type="image" src={require('../images/back-to-top.svg')} id="to-top" onClick={this.toTop.bind(this)}/>
                     </div>
-                    <div class="description">
+                    <motion.div class="description"
+                        animate={{  x: 5,
+                                y: -2 }}
+                        transition={{ duration: 0.5 }}
+                    >
                         <div>
                             <h2>More About Me</h2>
                         </div>
                         <p>In my free time, I enjoy making music, learning languages, and reading.
                             Here's some of what I've been up to recently...
                         </p>
-                    </div>
+                    </motion.div>
                     <div class="about-grid">
                         <div class="grid-item">
                             <img src={require("../images/guitar.jpg")} class="grid-img" alt="Photo by Annie Spratt on Unsplash" />

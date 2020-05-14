@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {motion} from 'framer-motion'
 
 export class Tab extends Component {
     addStyling = () => {
@@ -10,11 +11,19 @@ export class Tab extends Component {
     }
     render() {
         return (
-            <div className="tab"
-            style={this.addStyling()}
-            onClick={this.props.changeTab.bind(this, this.props.tab.id)}>
+            <motion.div className="tab"
+                initial={{ opacity: 0.75}}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                whileHover={{
+                    scale: 1.05,
+                    transition: { duration: 0.5 },
+                }}
+                whileTap={{ scale: 0.95 }}
+                style={this.addStyling()}
+                onClick={this.props.changeTab.bind(this, this.props.tab.id)}>
                 <h2>{this.props.tab.title}</h2>
-            </div>
+            </motion.div>
         );
     }
 }

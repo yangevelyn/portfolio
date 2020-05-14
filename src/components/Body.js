@@ -7,6 +7,7 @@ import Guestbook from './Guestbook';
 import Movies from './Movies';
 
 export class Body extends Component{
+
     displayContent = () => {
         var activeTab = this.props.activeTab;
         var functions = this.props.functions;

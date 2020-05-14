@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {motion} from 'framer-motion';
 
 export class Home extends Component{
     constructor(props){
@@ -18,12 +19,18 @@ export class Home extends Component{
                     <div>
                         <input type="image" src={require('../images/back-to-top.svg')} id="to-top" onClick={this.toTop.bind(this)}/>
                     </div>
-                    <div class="home-text">
+                    <motion.div class="home-text"
+                        initial={{ x: "3%",
+                                   y: "3%"     
+                                }}
+                        animate={{  x: -1,
+                                y: -1 }}
+                        transition={{ duration: 0.5 }}>
                         <p>hello, hello, i'm evelyn—welcome to my website! <br/>
                             i'm currently a second-year computer science major. <br/>
                             good to meet you!
                         </p>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         );
