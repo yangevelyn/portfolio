@@ -84,8 +84,8 @@ export class Movies extends Component{
                 <img src={require("../images/wave.png")} id="lightbox-img" />
                 <div id="info">
                     <h2>{this.state.title}<br/></h2>
-                    <br/>Directed by {this.state.director}<br/>
-                    <br />IMDB Rating: {this.state.rating}
+                    <br/><p>Directed by {this.state.director}<br />
+                    IMDB Rating: {this.state.rating}</p>
                 </div>
             </div>
         </div>

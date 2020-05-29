@@ -4,7 +4,9 @@ import About from './About';
 import Projects from './Projects';
 import Resume from './Resume';
 import Guestbook from './Guestbook';
-import Movies from './Movies';
+import Movies from './Movies2';
+import AddMovies from './AddMovies';
+import CreateLists from './CreateLists';
 
 export class Body extends Component{
 
@@ -23,6 +25,10 @@ export class Body extends Component{
             return <Guestbook functions={functions}/>
         } else if(activeTab == 6){
             return <Movies functions={functions}/>
+        } else if(activeTab == 7){
+            return <AddMovies functions={functions}/>
+        } else if(activeTab == 8){
+            return <CreateLists functions={functions}/>
         }
     }
     render() {

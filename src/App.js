@@ -153,6 +153,14 @@ export class App extends Component{
       {
         id: 6,
         title: 'MOVIES'
+      },
+      {
+        id: 7,
+        title: 'ADD MOVIES'
+      },
+      {
+        id: 8,
+        title: 'CREATE LISTS'
       }
     ]
 
