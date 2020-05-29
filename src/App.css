@@ -45,7 +45,7 @@ body {
 }
 
 .nav-bar .tab {
-  font-size: 1vw;
+  font-size: 0.75vw;
   margin-right: 2rem;
 }
 
@@ -378,6 +378,14 @@ hr {
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+.show-more {
+  position: fixed;
+  bottom: 6vh;
+  width: 92px;
+  height: 32px;
+  border-radius: 8px;
+}
+
 #lightbox div {
   margin: auto;
 }
@@ -432,7 +440,7 @@ hr {
   }
 
   .nav-bar .tab{
-      font-size: 4.5vw;
+      font-size: 4vw;
       justify-self: center;
       margin: unset;
   }
