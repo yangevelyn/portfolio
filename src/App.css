@@ -376,10 +376,15 @@ g {
   pointer-events: all;
 }
 
-.node text {
+.node .actor {
   display: none;
 }
-.node:hover text {
+
+.node .movie {
+  display: none;
+}
+
+.node:hover .actor {
   display: block;
 }
 
