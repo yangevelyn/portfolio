@@ -170,10 +170,18 @@ export class Graph extends Component{
         //         .attr("xlink:href", `${node.poster}`)
         //         .attr("x", 1000);
         
+
+        const textClass = (node) => {
+            if(node.type == 'actor'){
+                return 'actor';
+            }
+            return 'movie';
+        }
+
         const text = group
             .append("text")
             .attr("fill", d3.color("black"))
-            .attr("class", "text")
+            .attr("class", textClass)
             .text(function(d) {return d.name})
 
         
