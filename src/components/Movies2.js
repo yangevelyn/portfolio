@@ -28,7 +28,9 @@ export class Movies extends Component{
             lists: [],
             list: 'All',
             search: false,
-            currPage: 1
+            currPage: 1,
+            nodes: [],
+            links: []
         }
 
         this.handleScroll = this.state.functions.handleScroll.bind(this);
@@ -80,6 +82,8 @@ export class Movies extends Component{
             // console.log(lists);
             this.setState({lists: lists});
         });
+
+        this.getNodesArray();
     }
 
     movieLightbox = async (src, index) => {
@@ -227,6 +231,181 @@ export class Movies extends Component{
                 this.setState({posters: poster, search: true}, this.forceUpdate());
             }
         })
+    }
+
+    getNodesArray = () => {
+        let ref = firebase.database().ref('MovieLists').child('GraphViz');
+
+        ref.on('value', snap =>  {
+            var data = [];
+            snap.forEach(ss => {
+                data.push({
+                    name: ss.child('Title').val(),
+                    type: 'movie'
+                });
+                // console.log(ss.child('Actors').val())
+                let actors = [];
+                let actorsString = ss.child('Actors').val();
+                while(actorsString.search(',') != -1){
+                    actors.push(actorsString.slice(0, actorsString.search(',')));
+                    actorsString = actorsString.slice(actorsString.search(',') + 2);
+                }
+                actors.push(actorsString);
+                console.log(actors);
+                actors.map((i) => {
+                    if(data.findIndex(x => x.name === i) == -1){
+                        data.push({
+                            name: i,
+                            type: 'actor'
+                        });
+                    }
+                })
+            });
+            this.setState({nodes: data});
+            console.log(data);
+        });
+
+        let links = [
+            {
+                source: 0,
+                target: 1
+            },
+            {
+                source: 0,
+                target: 2
+            },
+            {
+                source: 0,
+                target: 3
+            },
+            {
+                source: 0,
+                target: 4
+            },
+            {
+                source: 5,
+                target: 6
+            },
+            {
+                source: 5,
+                target: 7
+            },
+            {
+                source: 5,
+                target: 8
+            },
+            {
+                source: 5,
+                target: 9
+            },
+            {
+                source: 10,
+                target: 11
+            },
+            {
+                source: 10,
+                target: 12
+            },
+            {
+                source: 10,
+                target: 2
+            },
+            {
+                source: 10,
+                target: 7
+            },
+            {
+                source: 13,
+                target: 14
+            },
+            {
+                source: 13,
+                target: 15
+            },
+            {
+                source: 13,
+                target: 16
+            },
+            {
+                source: 13,
+                target: 17
+            },
+            {
+                source: 13,
+                target: 1
+            },
+            {
+                source: 18,
+                target: 14
+            },
+            {
+                source: 18,
+                target: 19
+            },
+            {
+                source: 18,
+                target: 20
+            },
+            {
+                source: 18,
+                target: 21
+            },
+            {
+                source: 18,
+                target: 27
+            },
+            {
+                source: 22,
+                target: 14
+            },
+            {
+                source: 22,
+                target: 23
+            },
+            {
+                source: 22,
+                target: 24
+            },
+            {
+                source: 22,
+                target: 25
+            },
+            {
+                source: 26,
+                target: 27
+            },
+            {
+                source: 26,
+                target: 28
+            },
+            {
+                source: 26,
+                target: 29
+            },
+            {
+                source: 26,
+                target: 11
+            },
+            {
+                source: 30,
+                target: 20
+            },
+            {
+                source: 26,
+                target: 31
+            },
+            {
+                source: 26,
+                target: 32
+            },
+            {
+                source: 26,
+                target: 33
+            }
+        ]
+
+        this.setState({links: links})
+        console.log(links)
     }
 
     render() {

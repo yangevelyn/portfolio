@@ -161,6 +161,10 @@ export class App extends Component{
       {
         id: 8,
         title: 'CREATE LISTS'
+      },
+      {
+        id: 9,
+        title: 'GRAPH'
       }
     ]
 
