@@ -363,6 +363,26 @@ hr {
   justify-self: left;
 }
 
+.show-more {
+  position: fixed;
+  bottom: 6vh;
+  width: 92px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+/* GRAPH */
+g {
+  pointer-events: all;
+}
+
+.node text {
+  display: none;
+}
+.node:hover text {
+  display: block;
+}
+
 #lightbox {
   /* display: none;
   background-color: black; */
@@ -376,14 +396,6 @@ hr {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-.show-more {
-  position: fixed;
-  bottom: 6vh;
-  width: 92px;
-  height: 32px;
-  border-radius: 8px;
 }
 
 #lightbox div {
