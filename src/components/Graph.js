@@ -196,14 +196,13 @@ export class Graph extends Component{
                 console.log('looping ' + nodes[i].name.replace(/\s+/g, ''))
                 defs.append("svg:pattern")
                     .attr("id", nodes[i].name.replace(/\s+/g, ''))
-                    .attr("width", 300)
-                    .attr("height", 300)
-                    .attr("patternUnits", 30)
+                    .attr("width", 1)
+                    .attr("height", 1)
                     .append("image")
                         .attr("xlink:href", nodes[i].poster)
-                        .attr("width", 300)
-                        .attr("height", 300)
-                        .attr("x", 0)
+                        .attr("width", 250)
+                        .attr("height", 250)
+                        .attr("x", -50)
                         .attr("y", 0);
             }
         }
